@@ -7,5 +7,10 @@ def lines(path, strip=False, skip_empty=False):
             yield stripped
 
 
+def whole_file(path):
+    with open(path, "r") as input_file:
+        return input_file.read()
+
+
 def cmp(a, b):
     return (a > b) - (a < b)
