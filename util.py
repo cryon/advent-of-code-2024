@@ -14,3 +14,7 @@ def whole_file(path):
 
 def cmp(a, b):
     return (a > b) - (a < b)
+
+
+def c_add(t1, t2):
+    return t1[0] + t2[0], t1[1] + t2[1]
