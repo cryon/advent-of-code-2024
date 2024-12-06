@@ -12,9 +12,20 @@ def whole_file(path):
         return input_file.read()
 
 
+def chars_with_coords(path):
+    for y, line in enumerate(lines(path, True)):
+        for x, c in enumerate(line):
+            yield c, (x, y)
+
+
 def cmp(a, b):
     return (a > b) - (a < b)
 
 
 def c_add(t1, t2):
     return t1[0] + t2[0], t1[1] + t2[1]
+
+
+def rot_cw(v):
+    return -v[1], v[0]
+
