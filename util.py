@@ -26,6 +26,10 @@ def c_add(t1, t2):
     return t1[0] + t2[0], t1[1] + t2[1]
 
 
+def c_sub(t1, t2):
+    return t1[0] - t2[0], t1[1] - t2[1]
+
+
 def rot_cw(v):
     return -v[1], v[0]
 
