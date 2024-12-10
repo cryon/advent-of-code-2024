@@ -1,3 +1,6 @@
+from itertools import zip_longest
+
+
 def lines(path, strip=False, skip_empty=False):
     with open(path, "r") as input_file:
         for line in input_file:
@@ -16,6 +19,11 @@ def chars_with_coords(path):
     for y, line in enumerate(lines(path, True)):
         for x, c in enumerate(line):
             yield c, (x, y)
+
+
+def chunker(iterable, size, fill = 0):
+    seq = [iter(iterable)] * size
+    return zip_longest(*seq, fillvalue=fill)
 
 
 def cmp(a, b):
