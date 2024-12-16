@@ -41,3 +41,7 @@ def c_sub(t1, t2):
 def rot_cw(v):
     return -v[1], v[0]
 
+
+def rot_ccw(v):
+    return v[1], -v[0]
+
